@@ -1,0 +1,15 @@
+<p>pokelist works!</p>
+
+<div style="display:flex;flex-direction: row;">
+    <div>
+        Pokedex with id {{pokedex.id}} : <input [(ngModel)]="pokedex.name" />
+    </div>
+    <div>
+        Subscribe way
+        <div *ngFor="let pokemon of pokemons">{{pokemon.name}}</div>
+    </div>
+    <div style="margin-left:20px">
+        Async way
+        <div *ngFor="let pokemon of pokemonsAsync | async">{{pokemon.name}}</div>
+    </div>
+</div>
